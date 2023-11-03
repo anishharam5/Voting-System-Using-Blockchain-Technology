@@ -1,0 +1,95 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+.container-winner {
+  transition: ease all 0.75s;
+  background-color: #FAFAFA;
+  border-radius: 7px;
+  width: 700px;
+  padding: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  overflow: hidden;
+
+  color: black;
+}
+.winner-slogan {
+  
+  font-size: 1.1em;
+  text-align: justify;
+  overflow: auto;
+  color: black;
+  margin-left: 3px;
+  
+}
+.winner-info {
+  width: 73%;
+  max-height: 170px;
+  display: inline-block;
+  margin-right: 1%;
+  overflow: auto;
+  margin-top: 5px;
+  margin-bottom: 3%;
+  overflow: hidden;
+}
+.winner-votes {
+  width: 25%;
+  padding: 3px;
+  display: inline-block;
+  margin-left: auto;
+  margin-top: 29px;
+}
+.winner-tag {
+  text-align: left;
+  color: black;
+  margin-bottom: 0%;
+  margin-top: 0px;
+  font-weight: bolder;
+}
+.votes-tag {
+  text-align: left;
+  color: darkgray;
+  margin-top: 21px;
+  color: black;
+  font-weight: bold;
+  margin-top: auto;
+
+}
+.vote-count {
+  margin-top: 10px;
+  padding: 3px;
+  font-size: 210%;
+  overflow-y: auto;
+  text-align: center;
+}
+@media all and (max-width: 850px) {
+  .container-winner {
+    width: 700px;
+  }
+}
+@media all and (max-width: 750px) {
+  .container-winner {
+    width: 600px;
+  }
+}
+@media all and (max-width: 650px) {
+  .container-winner {
+    width: 400px;
+  }
+}
+@media all and (max-width: 400px) {
+  .container-winner {
+    width: 300px;
+  }
+}
