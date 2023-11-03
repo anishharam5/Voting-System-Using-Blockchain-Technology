@@ -11,7 +11,7 @@ a {
 nav {
   display: flex;
   height: 13vh;
-  background: #d3d3d3;
+  background: #1F1717;
   justify-content: space-around;
   position: sticky;
   top: 0;
@@ -52,7 +52,7 @@ nav .burger-menu {
   display: none;
 }
 .nav-active {
-  color:black;
+  color:#F4CE14;
 }
 
 @media all and (max-width: 777px) {
