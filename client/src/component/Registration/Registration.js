@@ -132,12 +132,27 @@ export default class Registration extends Component {
   updateVoterPhone = (event) => {
     this.setState({ voterPhone: event.target.value });
   };
+  // registerAsVoter = async () => {
+  //   await this.state.ElectionInstance.methods
+  //     .registerAsVoter(this.state.voterName, this.state.voterPhone)
+  //     .send({ from: this.state.account, gas: 1000000 });
+  //   window.location.reload();
+  // };
   registerAsVoter = async () => {
-    await this.state.ElectionInstance.methods
-      .registerAsVoter(this.state.voterName, this.state.voterPhone)
-      .send({ from: this.state.account, gas: 1000000 });
+    if (this.state.currentVoter.isRegistered) {
+      // Voter is already registered, send update transaction
+      await this.state.ElectionInstance.methods
+        .registerAsVoter(this.state.voterName, this.state.voterPhone)
+        .send({ from: this.state.account, gas: 1000000 });
+    } else {
+      // Voter is not registered, send registration transaction
+      await this.state.ElectionInstance.methods
+        .registerAsVoter(this.state.voterName, this.state.voterPhone)
+        .send({ from: this.state.account, gas: 1000000 });
+    }
     window.location.reload();
   };
+
   render() {
     if (!this.state.web3) {
       return (
@@ -199,8 +214,8 @@ export default class Registration extends Component {
                     </label>
                   </div>
                   <p className="note">
-                    <span style={{ color: "tomato" }}> Note: </span>
-                    <br /> Make sure your account address and National ID Number (add it without v) are
+                    <span style={{ color: "white" }}> Note: </span>
+                    <br /> Make sure your account address and National ID Number are
                     correct. <br /> Admin might not approve your account if the
                     provided National ID Number does not matches the account
                     address registered in admins catalogue.
@@ -253,9 +268,9 @@ export function loadCurrentVoter(voter, isRegistered) {
   return (
     <>
       <div
-        className={"container-item " + (isRegistered ? "success" : "attention")}
+        className={"container-item info " + (isRegistered ? "success" : "attention")}
       >
-        <center>Your Registered Info</center>
+        <p /*className="yri" style={{width:"62%"}}*/> <center>Your Registered Info</center></p> 
       </div>
       <div
         className={"container-list " + (isRegistered ? "success" : "attention")}

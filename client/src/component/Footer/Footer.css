@@ -1,32 +1,37 @@
 .footer,
 .footer-block {
-  padding: 11px;
+  padding: 17px;
   height: 40px;
   width: 100%;
   overflow: auto;
 }
+p{
+  color: whitesmoke;
+}
 .footer {
-  background-color: #FAFAFA;
+  background-color: #1F1717;
   text-align: center;
   position: fixed;
   left: 0;
   bottom: 0;
   overflow: auto;
+  padding: 5px;
+  /* overflow: hidden; */
 }
 .footer-block {
   display: block;
 }
 
 a.profile {
-  color: #000;
+  color: #F39F5A;
   text-decoration: underline;
 }
 a.profile:hover {
-  color: #1B2D4B;
+  color: whitesmoke;
   text-decoration: underline;
 }
 .footer-container {
-  /* padding: 7px; */
+  padding: 7px;
   width: 97%;
   margin-left: auto;
   margin-right: auto;

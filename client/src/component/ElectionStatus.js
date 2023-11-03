@@ -14,6 +14,8 @@ const ElectionStatus = (props) => {
     alignItems: "center",
     justifyContent: "space-around",
     display: "flex",
+    background: "#1F1717",
+    
   };
   return (
     <div
@@ -22,8 +24,8 @@ const ElectionStatus = (props) => {
     >
       <h3>Election Status</h3>
       <div style={electionStatus}>
-        <p>Started: {props.elStarted ? "True" : "False"}</p>
-        <p>Ended: {props.elEnded ? "True" : "False"}</p>
+        <p className="elecstat" >Started: {props.elStarted ? "True" : "False"}</p>
+        <p className="elecstat">Ended: {props.elEnded ? "True" : "False"}</p>
       </div>
       <div className="container-item" />
     </div>

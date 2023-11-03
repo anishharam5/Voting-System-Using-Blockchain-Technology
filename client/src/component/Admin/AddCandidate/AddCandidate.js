@@ -199,7 +199,7 @@ export function loadAdded(candidates) {
           className="container-item"
           style={{
             display: "block",
-            backgroundColor: "#FEFEFE",
+            backgroundColor: "#1F1717",
           }}
         >
           {candidates.map(renderAdded)}

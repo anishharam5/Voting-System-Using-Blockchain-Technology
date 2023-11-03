@@ -48,7 +48,7 @@ code {
 }
 
 .container-list {
-  width: 100%;
+  width: 62%;
   padding: 11px;
   margin: 3px auto;
   align-items: center;
@@ -111,4 +111,9 @@ code {
 .success {
   background-color: #004225;
   color: #FAFAFA;
+}
+
+.elecstat{
+  color: white;
+  font-weight: bold;
 }
