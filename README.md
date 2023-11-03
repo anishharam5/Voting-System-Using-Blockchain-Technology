@@ -1,5 +1,5 @@
 
-# Decentralized Voting (UxVote)
+# Decentralized Voting (HAN-Vote)
 
 A decentralized voting system based on Ethereum blockchain technology (designed for corporate use).
 
