@@ -137,21 +137,58 @@ contract Election {
     address[] public voters; // Array of address to store address of voters
     mapping(address => Voter) public voterDetails;
 
+    // Mapping to track unique voter addresses
+    mapping(address => bool) private uniqueVoterAddresses;
     // Request to be added as voter
-    function registerAsVoter(string memory _name, string memory _phone) public {
-        Voter memory newVoter =
-            Voter({
-                voterAddress: msg.sender,
-                name: _name,
-                phone: _phone,
-                hasVoted: false,
-                isVerified: false,
-                isRegistered: true
-            });
-        voterDetails[msg.sender] = newVoter;
-        voters.push(msg.sender);
-        voterCount += 1;
+    //function registerAsVoter(string memory _name, string memory _phone) public {
+    //    Voter memory newVoter =
+    //      Voter({
+    //          voterAddress: msg.sender,
+    //          name: _name,
+    //          phone: _phone,
+    //          hasVoted: false,
+    //          isVerified: false,
+    //          isRegistered: true
+    //      });
+    //  voterDetails[msg.sender] = newVoter;
+    //  voters.push(msg.sender);
+    //  voterCount += 1;
+    //}
+    
+// Request to be added as a voter
+function registerAsVoter(string memory _name, string memory _phone) public {
+    require(!uniqueVoterAddresses[msg.sender], "Voter is already registered.");
+    
+    Voter memory newVoter =
+        Voter({
+            voterAddress: msg.sender,
+            name: _name,
+            phone: _phone,
+            hasVoted: false,
+            isVerified: false,
+            isRegistered: true
+        });
+    
+    voterDetails[msg.sender] = newVoter;
+    voters.push(msg.sender);
+    uniqueVoterAddresses[msg.sender] = true;
+    voterCount += 1;
+}
+
+    // Update voter information
+    function updateVoterInfo(string memory _name, string memory _phone) public {
+        require(uniqueVoterAddresses[msg.sender], "Voter is not registered.");
+        
+        Voter storage existingVoter = voterDetails[msg.sender];
+        existingVoter.name = _name;
+        existingVoter.phone = _phone;
     }
+
+    // Get total unique voters count
+    function getTotalUniqueVoters() public view returns (uint256) {
+        return voters.length;
+    }
+
 
     // Verify voter
     function verifyVoter(bool _verifedStatus, address voterAddress)

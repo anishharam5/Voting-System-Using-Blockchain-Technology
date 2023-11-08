@@ -221,18 +221,31 @@ export default class Registration extends Component {
                     address registered in admins catalogue.
                   </p>
                   <button
-                    className="btn-add"
-                    disabled={
-                      (this.state.voterPhone.length !== 9 && this.state.voterPhone.length !== 12) || 
-                      this.state.currentVoter.isVerified
-                      //this.state.currentVoter.isRegistered
-                    }
-                    onClick={this.registerAsVoter}
-                  >
-                    {this.state.currentVoter.isRegistered
-                      ? "Update"
-                      : "Register"}
-                  </button>
+  className="btn-add"
+  disabled={
+    (this.state.voterPhone.length !== 12) || 
+    this.state.currentVoter.isVerified ||
+    this.state.currentVoter.isRegistered
+  }
+  onClick={this.registerAsVoter}
+>
+  {this.state.currentVoter.isRegistered
+    ? "Update"
+    : "Register"}
+</button>
+<button
+  className="btn-add"
+  // disabled={
+  //   (this.state.voterPhone.length !== 12) || 
+  //   this.state.currentVoter.isVerified
+  // }
+  onClick={this.updateVoterInfo}
+>
+  {this.state.currentVoter.isRegistered
+    ? "Update"
+    : "Register"}
+</button>
+
                 </form>
               </div>
             </div>
