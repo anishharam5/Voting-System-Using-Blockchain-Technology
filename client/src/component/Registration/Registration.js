@@ -233,7 +233,7 @@ export default class Registration extends Component {
                     ? "Update"
                     : "Register"}
                 </button>
-                <button
+                {/* <button
                   className="btn-add"
                   // disabled={
                   //   (this.state.voterPhone.length !== 12) || 
@@ -244,7 +244,7 @@ export default class Registration extends Component {
                   {this.state.currentVoter.isRegistered
                     ? "Update"
                     : "Register"}
-                </button>
+                </button> */}
 
                 </form>
               </div>
