@@ -181,8 +181,8 @@ export default class Registration extends Component {
         <NavbarAdmin />
         <div className="container-main">
           <h3>Verification</h3>
-          <small>Total Voters: {this.state.voters.length}</small>
-          {this.state.voters.length < 1 ? (
+          <small>Total Voters: {this.state.voters.length}</small></div>
+          <div className="container-main">{this.state.voters.length < 1 ? (
             <div className="container-item info">None has registered yet.</div>
           ) : (
             <>

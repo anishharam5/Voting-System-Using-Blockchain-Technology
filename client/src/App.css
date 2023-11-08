@@ -28,18 +28,23 @@ code {
   justify-content: center;
   display: block;
   overflow: auto;
-  margin-left: 19%;
+  /* margin-left: 19%; */
+  margin-left: auto;
+  margin-right: auto;
 } 
 
 .container-main {
   background-color: none;
-  padding: 1%;
-  margin: 11px;
+  /* padding: 1%; */
+  /* margin: 11px; */
   margin-left: auto;
   margin-right: auto;
   width: max-content;
   overflow: auto;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
+
 
 .container-item {
   transition: ease all 0.5s;
@@ -130,18 +135,24 @@ code {
   .container-item {
     width: 300px;
   }
+  
 }
+@media all and (max-width: 900px) {
+  .container-list {
+    margin-left: 5%; /* Adjust the left margin for smaller screens */
+  }}
 
 .info,
 .attention,
 .alert,
 .success {
   margin-top: 11px;
-  margin-bottom: 11px px;
+  margin-bottom: 11px ;
 }
 .info {
   background-color: #004225;
   color: #FAFAFA;
+  
 }
 .attention {
   background-color: #004225;
