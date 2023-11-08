@@ -19,6 +19,17 @@ code {
   border-radius: 6px;
   border: 1px solid;
 }
+.container-list {
+  width: 62%;
+  padding: 11px;
+  /* margin: 3px auto; */
+  /* margin: auto; */
+  align-items: center;
+  justify-content: center;
+  display: block;
+  overflow: auto;
+  margin-left: 19%;
+} 
 
 .container-main {
   background-color: none;
@@ -35,6 +46,32 @@ code {
   background-color: #F39F5A;
   border-radius: 7px;
   width: 977px;
+  padding: 10px;
+  margin: 17px auto;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: auto;
+}
+
+
+/* .container-main {
+  background-color: none;
+  padding: 1%;
+  margin: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  overflow: auto;
+}
+
+.container-item {
+  transition: ease all 0.5s;
+  background-color: #f2f2f2;
+  border-radius: 7px;
+  width: 977px;
   padding: 17px;
   margin: 17px auto;
   align-items: center;
@@ -43,19 +80,21 @@ code {
   overflow: auto;
 }
 
-.title {
-  text-transform: capitalize;
-}
 
 .container-list {
-  width: 62%;
+  width: 100%;
   padding: 11px;
   margin: 3px auto;
   align-items: center;
   justify-content: center;
   display: block;
   overflow: auto;
+} */
+.title {
+  text-transform: capitalize;
 }
+
+
 .center-items {
   display: grid;
   place-items: center;

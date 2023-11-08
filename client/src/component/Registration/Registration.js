@@ -221,30 +221,30 @@ export default class Registration extends Component {
                     address registered in admins catalogue.
                   </p>
                   <button
-  className="btn-add"
-  disabled={
-    (this.state.voterPhone.length !== 12) || 
-    this.state.currentVoter.isVerified ||
-    this.state.currentVoter.isRegistered
-  }
-  onClick={this.registerAsVoter}
->
-  {this.state.currentVoter.isRegistered
-    ? "Update"
-    : "Register"}
-</button>
-<button
-  className="btn-add"
-  // disabled={
-  //   (this.state.voterPhone.length !== 12) || 
-  //   this.state.currentVoter.isVerified
-  // }
-  onClick={this.updateVoterInfo}
->
-  {this.state.currentVoter.isRegistered
-    ? "Update"
-    : "Register"}
-</button>
+                  className="btn-add"
+                  disabled={
+                    (this.state.voterPhone.length !== 12) || 
+                    this.state.currentVoter.isVerified ||
+                    this.state.currentVoter.isRegistered
+                  }
+                  onClick={this.registerAsVoter}
+                >
+                  {this.state.currentVoter.isRegistered
+                    ? "Update"
+                    : "Register"}
+                </button>
+                <button
+                  className="btn-add"
+                  // disabled={
+                  //   (this.state.voterPhone.length !== 12) || 
+                  //   this.state.currentVoter.isVerified
+                  // }
+                  onClick={this.updateVoterInfo}
+                >
+                  {this.state.currentVoter.isRegistered
+                    ? "Update"
+                    : "Register"}
+                </button>
 
                 </form>
               </div>
@@ -283,10 +283,10 @@ export function loadCurrentVoter(voter, isRegistered) {
       <div
         className={"container-item info " + (isRegistered ? "success" : "attention")}
       >
-        <p /*className="yri" style={{width:"62%"}}*/> <center>Your Registered Info</center></p> 
+        <p > <center>Your Registered Info</center></p> 
       </div>
       <div
-        className={"container-list " + (isRegistered ? "success" : "attention")}
+        className={"container-item " + (isRegistered ? "success" : "attention")}
       >
         <table>
           <tr>
