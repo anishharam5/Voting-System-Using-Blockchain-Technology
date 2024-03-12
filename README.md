@@ -47,8 +47,8 @@ Admin will create a voting instance by launching/deploying the system in a block
 1. Clone this repository
 
    ```shell
-   git clone https://github.com/itsnue/u-vote_project.git
-   cd u-vote_project
+   git clone https://github.com/anishharam5/Voting-System-Using-Blockchain-Technology.git
+   cd Voting-System-Using-Blockchain-Technology
    ```
 
 1. Run local Ethereum blockchain
@@ -92,7 +92,7 @@ Admin will create a voting instance by launching/deploying the system in a block
           View this project on{" "}
           <a
             className="profile"
-            href="https://github.com/kumuthu-vinsura/u-vote_project"
+            href="https://github.com/anishharam5/Voting-System-Using-Blockchain-Technology"
             target="_blank"
             rel="noopener noreferrer"
           >
