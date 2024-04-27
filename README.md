@@ -1,5 +1,5 @@
 
-# Decentralized Voting (HAN-Vote)
+# HAN-Vote : A Blockchain Based Voting System
 
 A decentralized voting system based on Ethereum blockchain technology (designed for corporate use).
 
